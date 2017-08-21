@@ -1,0 +1,10 @@
+<a
+  class="list-group-item list-group-item-action flex-column align-items-start"
+  [routerLink]="['/post', post.id]"
+  >
+  <div class="d-flex w-100 justify-content-between">
+    <h5 class="mb-1">{{ post.title }}</h5>
+    <small><strong>Posted:</strong> {{ post.createdDate }}</small>
+  </div>
+  <p class="mb-1">{{ post.content }}</p>
+</a>

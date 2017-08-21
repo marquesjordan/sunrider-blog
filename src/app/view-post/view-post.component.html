@@ -1,0 +1,12 @@
+<div><a routerLink="/posts" >< Back to blog list</a></div>
+<div>
+  <h1>{{ post.title }}</h1>
+  <strong>Author: </strong>{{ post.author }}
+  <p>{{post.content}}</p>
+</div>
+<div>
+  <button class="btn btn-default" [routerLink]="['/post/edit', post.id]">Edit</button>
+  <button class="btn btn-danger" (click)="onDeleteButtonClick(post.id)">Delete</button>
+</div>
+
+

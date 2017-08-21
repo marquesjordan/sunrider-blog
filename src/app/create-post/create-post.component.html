@@ -1,0 +1,13 @@
+<h1>Create a new post</h1>
+<form (ngSubmit)="onSubmit(form)" #form="ngForm">
+  <div class="form-group">
+      <label for="title">Title</label>
+      <input class="form-control" id="title" name="title" rows="3" ngModel required>
+    </div>
+  <div class="form-group">
+    <label for="content">Content</label>
+    <textarea class="form-control" id="content" name="content" rows="3" ngModel required></textarea>
+  </div>
+  <button type="submit" class="btn btn-primary" [disabled]="form.invalid">Create Post</button>
+  <a routerLink="/posts" class="cancel-text">Cancel</a>
+</form>
